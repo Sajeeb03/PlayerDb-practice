@@ -40,9 +40,11 @@ const Home = () => {
             </div>
             <div className="cart-container">
                 <div className='cart'>
+                    <h3>Total Player: {cart.length}</h3>
                     {
                         cart.map(pd => <div className='cart-handle'>
-                            <li>{pd.idPlayer}</li>
+
+                            <li>{pd.strPlayer}</li>
                             <button onClick={() => handleDelete(pd.idPlayer)} className='delete-btn'>X</button>
                         </div>)
                     }

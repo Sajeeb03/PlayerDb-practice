@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createFactory } from 'react';
 import "./SinglePlayer.css"
 
 const SinglePlayer = ({ player, cart, setCart }) => {
@@ -11,13 +11,20 @@ const SinglePlayer = ({ player, cart, setCart }) => {
             strNationality,
             price: 120
         };
+        if (cart.length <= 4) {
         if (cart) {
-            const newCart = [...cart, info]
-            setCart(newCart);
+            const isExist = cart.find(pd => pd.idPlayer === idPlayer);
+            isExist && alert('can not add twice')
+            isExist || setCart([...cart, info]);
         }
         else {
             setCart([info])
         }
+       }
+       else {
+           alert('do not add more than five');
+           return;
+       }
 
     }
     const handleBookmark = () => {
