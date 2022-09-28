@@ -1,0 +1,42 @@
+.home-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 5px;
+}
+
+.cart {
+    border: 1px solid gray;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px gray;
+    position: sticky;
+    top: 0;
+}
+
+#input-field {
+    padding: 15px;
+    width: 50%;
+    font-weight: 700;
+}
+
+.btn-search {
+    padding: 17px;
+    color: white;
+    border: none;
+    background-color: blue;
+    font-weight: 700;
+}
+
+.cart-handle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 7px;
+}
+
+.delete-btn {
+    background-color: yellow;
+    color: red;
+    border: 1px solid gold;
+}

@@ -1,0 +1,26 @@
+import React from 'react';
+import SinglePlayer from '../SinglePlayer/SinglePlayer';
+import "./Players.css"
+const Players = ({ players, cart, setCart }) => {
+    // console.log(players);
+    return (
+        <div>
+            <div className='card-container'>
+                {
+                    players?.length && players.map(pd => (
+                        <SinglePlayer
+                            player={pd}
+                            key={pd?.idPlayer}
+                            cart={cart}
+                            setCart={setCart}
+                        ></SinglePlayer>
+                    ))
+                }
+
+            </div>
+
+        </div>
+    );
+};
+
+export default Players;
